@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,48 +6,49 @@ using System.Threading.Tasks;
 
 namespace Diagrama_de_clases
 {
-    internal class Terrestres : Vehiculos
+    internal class Terrestres 
     {
-        private int ruedas;
-        private bool manubrio;
-        private string motor;
-        private bool frenos;
+        private int Ruedas;
+        private string Motor;
+        private string Frenos;
         private int Luces;
-        private bool Tubo_de_escape;
-        private bool direccionales;
-        private int Retrovisores;
 
-        public Terrestres()
-        {
-            ruedas = 4;
-            manubrio = true;
-            motor = "gasolina";
-            frenos = true;
-            Luces = 7;
-            Tubo_de_escape =true;
-            direccionales = true;
-            Retrovisores = 3;
 
-        }
-        public void setInfodeTerrestre(int ruedas, bool manubrio, string motor, bool frenos, int luces, bool Tubo_de_escape, bool direccionales, int Retrovisores)
-        {
-            this.ruedas = ruedas;
-            this.manubrio = manubrio;
-            this.motor = motor;
-            this.frenos = frenos;
-            this.Luces = luces;
-            this.Tubo_de_escape = Tubo_de_escape;
-            this.direccionales = direccionales;
-            this.Retrovisores=Retrovisores;
 
-        }
-        public string getInfodeTerrestre()
+        public Terrestres(int Ruedas,string Motor,string Frenos,int Luces)
         {
-            return "El vehiculo terrestre tiene la siguiente informacion: \n numero de ruedas:" + ruedas +
-                "\n Manubrio " + manubrio + "\n Tipo de motor " + motor + "\n Frenos " + frenos + "\n Luces " + Luces +
-                "\n Tubo de escape: " + Tubo_de_escape + "\n Direccionales " + direccionales + " Cantidad de retrovisores" +
-                Retrovisores;
+            this.Ruedas = Ruedas;
+            this.Motor = Motor;
+            this.Frenos = Frenos;
+            this.Luces = Luces;
         }
+
+
+        public int GetRuedas()
+        { return Ruedas; }
+
+        public void SetRuedas(int Ruedas)
+        { this.Ruedas = Ruedas; }
+
+        public String GetMotor()
+        { return Motor; }
+
+        public void SetMotor(string Motor)
+        { this.Motor = Motor; }
+
+        public string GetFrenos()
+        { return Frenos; }
+
+        public void SetFrenos(string Frenos)
+        { this.Frenos = Frenos; }
+
+        public int GetLuces()
+        { return Luces; }
+
+        public void SetLuces(int Luces)
+        { this.Luces = Luces; }
+
+
 
         private bool Frenar()
         {
