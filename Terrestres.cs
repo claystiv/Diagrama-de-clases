@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Diagrama_de_clases
 {
-    internal class Terrestres
+    internal class Terrestres : Vehiculos
     {
         private int ruedas;
         private bool manubrio;
