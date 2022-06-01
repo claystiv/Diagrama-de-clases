@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,46 +8,37 @@ namespace Diagrama_de_clases
 {
     internal class Carros
     {
-        public Carros()
+        private string Traccion;
+        private int Puertas;
+        private int Ventanas;
+
+        public Carros(string Traccion, int Puertas,int Ventanas)
         {
-            techo = true;
-            puertas = 4;
-            ventanas = 4;
-            Capo = true;
+
+            this.Traccion = Traccion;
+            this.Puertas = Puertas;
+            this.Ventanas = Ventanas;
         }
 
-        private bool techo;
-        private int puertas;
-        private int ventanas;
-        private bool Capo;
+        public string GetTraccion()
+        { return Traccion; }
 
-        public void setCarros(bool techo, int puertas, int ventanas, bool Capo)
-        {
-            this.techo = techo;
-            this.puertas = puertas;
-            this.ventanas = ventanas;
-            this.Capo = Capo;
-        }
-        public string getCarros()
-        {
-            return "\n El vehiculo tiene la siguiente informacion: \n Si tiene techo: :"
-                    + techo + "\n El numero de puertas: " + puertas +
-                    "\n El numero de ventanas: " + ventanas + "\n Si tiene Capo: " + Capo;
-        }
-        public bool aireacondicionado()
-        {
-            Console.WriteLine("Si tiene aire acondicionado");
-            return true;
-        }
-        public bool reproductoraudio()
-        {
-            Console.WriteLine("Si tiene radio");
-            return true;
-        }
-        public bool LimpiaParabrisas()
-        {
-            Console.WriteLine("Si tiene limpiaparabrisas");
-            return true;
-        }
+        public void SetTraccion(string Traccion)
+        { this.Traccion = Traccion; }
+
+        public int GetPuertas()
+        { return Puertas; }
+
+        public void SetPuertas(int Puertas)
+        { this.Puertas = Puertas; }
+
+        public int GetVentanas()
+        { return Ventanas; }
+
+        public void SetVentanas(int Ventanas)
+        { this.Ventanas = Ventanas; }
+
+
+
     }
 }
